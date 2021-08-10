@@ -7,8 +7,8 @@ class TestLever:
     api_Url = "http://localhost:8072/api/lever/total"
 
     @pytest.mark.parametrize('classA,classB,lever', [
-        [80, 60, 'Lever A'],
-        [20, 50, 'Lever B'],
+        [80, 160, 'Invalid result!'],
+        [50, 150, 'Lever A'],
     ])
     def test_leverToal(self, classA, classB, lever):
         url = self.api_Url + "?classA={}&classB={}".format(classA, classB)
